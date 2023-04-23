@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/home/main.css">
+    <link rel="shortcut icon" href="https://beraming.com/wp-content/uploads/2020/04/BI_02-1.png" type="image/x-icon" />
+    <STYLE>
+    </STYLE>
+    <title>오시는길 | 비허밍스터디카페 세종새롬점</title>
+    <script src="/lib/home/fontawesome-free-6.4.0-web/js/all.min.js"></script>
+    <script src="/lib/home/jquery-3.6.4.min.js"></script>
+    <script src="/lib/home/fontawesome-free-6.4.0-web/js/all.min.js"></script>
+    <script src = "/js/home/login.js"></script>
+    <SCRIPT>
+        $(document).ready(()=>{
+            const toggleBtn = document.querySelector('.navToggleBtn');
+            const menu = document.querySelector('.navMenu');
+
+            toggleBtn.addEventListener('click',()=>{
+                menu.classList.toggle('active')
+            })
+
+
+            //화면 크기 조정
+            // $(window).resize(()=>{
+            //     const windowWidth = 1800;
+            //     const windowHeight = 937;
+            //     windowInnerWidth = window.innerWidth;
+            //     windowInnerHeight = window.innerHeight;
+
+            //     rateX = windowInnerWidth / windowWidth;
+            //     rateY = windowInnerWidth / windowHeight;
+
+            //     $(".mainFooter").css('height' , rateY * 150)
+            //     $(".FooterWrap").css('width',rateX * 1100)
+            //     $(".FooterTitle").children('strong').css('font-size', ( rateX * 20 ) + 'px' )
+            //     $(".FooterConn").children('ul').children('li').css('font-size',( rateX * 45 ) + 'px' )
+            // })
+        })
+    </SCRIPT>
+</head>
+<body>
+    <div class="adminContainer">
+        <form class="adminWrap" onsubmit="handleSubmit(event)">
+            <div class="title-box">admin</div>
+            <div class="input-box">
+                <input type="text" id = "id" placeholder="아이디" autocomplete="off" required>
+            </div>
+            <div class="input-box">
+                <input type="text" id = "pw" placeholder="비밀번호" autocomplete="off" required>
+            </div>
+            <div class="btn-box">
+                <input type="submit" value="login">
+            </div>
+        </form>
+    </div>
+
+    
+    
+   
+</body>
+</html>

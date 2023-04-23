@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/home/main.css">
+    <link rel="shortcut icon" href="https://beraming.com/wp-content/uploads/2020/04/BI_02-1.png" type="image/x-icon" />
+    <STYLE>
+    </STYLE>
+    <title>공지사항 | 비허밍스터디카페 세종새롬점</title>
+    <script src="/lib/home/fontawesome-free-6.4.0-web/js/all.min.js"></script>
+    <script src="/lib/home/jquery-3.6.4.min.js"></script>
+    <script src="/lib/home/fontawesome-free-6.4.0-web/js/all.min.js"></script>
+    <script src="/js/home/bbs/detail.js"></script>
+    <SCRIPT>
+        $(document).ready(()=>{
+            const toggleBtn = document.querySelector('.navToggleBtn');
+            const menu = document.querySelector('.navMenu');
+
+            toggleBtn.addEventListener('click',()=>{
+                menu.classList.toggle('active')
+            })
+
+            getBoardData();
+            //화면 크기 조정
+            // $(window).resize(()=>{
+            //     const windowWidth = 1800;
+            //     const windowHeight = 937;
+            //     windowInnerWidth = window.innerWidth;
+            //     windowInnerHeight = window.innerHeight;
+
+            //     rateX = windowInnerWidth / windowWidth;
+            //     rateY = windowInnerWidth / windowHeight;
+
+            //     $(".mainFooter").css('height' , rateY * 150)
+            //     $(".FooterWrap").css('width',rateX * 1100)
+            //     $(".FooterTitle").children('strong').css('font-size', ( rateX * 20 ) + 'px' )
+            //     $(".FooterConn").children('ul').children('li').css('font-size',( rateX * 45 ) + 'px' )
+            // })
+        })
+    </SCRIPT>
+</head>
+<body>
+    
+   
+    <nav class="navBar">
+        <div class="navLogo"><a href="/"><img src="/lib/home/assets/beramingNav.png"></a></div>
+        <ul class="navMenu">
+            <li ><a href = "/" class="home">홈</a></li>
+            <li><a href = "/room" class="room">공간소개</a></li>
+            <li><a href = "/map" class="map">오시는길</a></li>
+            <li><a href = "/price" class="price">이용요금</a></li>
+            <li class="active"><a href = "/bbs/board" class="board active">공지사항</a></li>
+        </ul>
+
+        <a class="navToggleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+
+
+
+    
+    <div class="boardContainer">
+        <div class="boardWrap">
+            <div class="boardTitle">
+                공지사항
+            </div>
+            <div class="boardViewWrap">
+                <div class="boardView">
+                </div>
+                <div class="boardBtn">
+                    <a href = "/bbs/board" class="on">목록</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="subMenu">
+        <ul>
+            <li><a class="phone" href="/map"><i class="fa-solid fa-phone"></i></a></li>
+            <li><a class="map" href="/map"><i class="fa-solid fa-location-dot"></i></a></li>
+        </ul>        
+    </div>
+
+    <div class="mainFooter">
+        <div class="FooterWrap">
+            <div class="FooterTitle">
+                <strong>세종특별자치시 새롬중앙로 33 3층</strong>
+                <p>010-5835-8393</p>
+            </div>
+            <div class="FooterConn">
+                <ul>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-google"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

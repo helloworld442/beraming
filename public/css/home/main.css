@@ -1,0 +1,304 @@
+html,body {margin: 0;padding: 0;height: 100%;width: 100%;}
+ul {list-style: none;padding-left: 0px;margin: 0;}
+a {text-decoration: none;color: #333;}
+input:focus {outline: none;}
+
+/* 네비게이션 바 디자인 */
+.navBar {position: fixed;top : 0;width : 100%;display: flex;justify-content: space-around;background-color: #fff;align-items: center;border-bottom: 1px solid #ddd;height: 100px;z-index: 100;}
+.navLogo {width: 156px;height: 37px;}
+.navLogo > a {width: 100%;height: 100%;}
+.navLogo > a > img {width: 100%;height: 100%;}
+.navMenu {display: flex;justify-content: space-around;}
+.navMenu > li {position: relative; display: inline-block; margin: 0 20px;text-align: center; line-height: 30px; cursor: pointer;}
+.navMenu > li > a {font-weight: 550;width: 100%;font-size: 16px;font-family: '맑은 고딕';color: #777;transition: all .5s;}
+.navMenu > li::after {position: absolute; content:""; display: block; border-bottom: 1px solid #d6561a; transition: width 250ms ease-in-out; left: auto;bottom: -1px; width: 0;}
+.navMenu > li:hover::after {width: 100%;}
+.navMenu > li:hover > a {color: #d6561a;}
+.navMenu > li.active::after {width: 100%;}
+.navMenu > li > a.active {color: #d6561a;;}
+.navToggleBtn {position: absolute;top: 0;right: 0;padding: 10px 10px 10px 0;font-size: 26px;color: #777;display: none;}
+/* 서브네이게이션 디자인 */
+.subMenu > ul > li:first-child {bottom: 20%;right: 5%;}
+.subMenu > ul > li {margin: 30px;position: fixed;bottom: 10%;right: 5%;z-index: 100;}
+.subMenu > ul > li > a {font-size: 30px;width: 80px;height: 80px;display: flex;justify-content: center;align-items: center;background-color: #d6561a;color: #fff;border-radius: 50%;box-shadow: 5px 5px 5px gray;}
+.subMenu > ul > li > .phone:hover {width: 150px;border-radius: 50px;}
+.subMenu > ul > li > .phone:hover::after {content: '전화';font-size: 22px;font-weight: 550;}
+.subMenu > ul > li > .map:hover {width: 150px;border-radius: 50px;}
+.subMenu > ul > li > .map:hover::after {content: '오시는길';font-size: 21px;font-weight: 550;}
+/* 홈화면 페이지 디자인 */
+.mainLogo {width: 100%;margin-top: 100px;}
+.mainLogo > img {width: 100%;height: 600px;object-fit: cover;}
+.mainLogo > .mainLogoLan {position: absolute;top: 25%;left: 15%;display: flex;align-items: center;}
+.mainLogo > .mainLogoLan > img {border-radius: 50%;width: 150px;height: 150px;display: inline-block;}
+.mainLogo > .mainLogoLan > div > strong {font-size: 22px;color: #fff;margin-left: 20px;font-weight: 550;}
+.mainLogo > .mainLogoLan > div > p {font-size: 18px;font-weight: 450;margin: 0;margin: 5px 20px;color: #ddd;}
+.mainWrap {padding-top: 50px;width: 1300px;margin: 100px auto;margin-top: 50px;}
+.mainTitle {text-align: center;padding: 30px 30px;margin-bottom: 50px;box-sizing: border-box;}
+.mainTitle > strong {color:#d6561a;font-size: 20px;}
+.mainTitle > p {font-size: 20px;color: #777;font-weight: 520;}
+.more {color: #555;font-size: 20px;}
+.mainBoardContainer > .BoardTitle {padding: 10px;margin: 10px;border-bottom: 1px solid #888;display: flex;justify-content: space-between;}
+.mainBoardContainer > .BoardTitle > strong {font-size: 20px; color: #d6561a; font-weight: 550;}
+.mainRoomContainer > .roomTitle {padding: 10px;margin: 10px;border-bottom: 1px solid #888;display: flex;justify-content: space-between;}
+.mainRoomContainer > .roomTitle > strong {font-size: 20px; color: #d6561a;font-weight: 550;}
+.mainRoomContainer > .roomData > .picture {text-align: center;padding: 20px;}
+.mainRoomContainer > .roomData > .picture > img {width: 353px;height: 353px;margin:  20px;border-radius: 15px;border: 5px solid #d6561a;}
+.mainRoomContainer > .roomData > .describle {padding: 20px;}
+.mainRoomContainer > .roomData > .describle > strong {font-size: 24px;font-weight: 550;color: #d6561a;}
+.mainRoomContainer > .roomData > .describle > p {font-size: 16px;color: #777;font-weight: 550;}
+.mainMapContainer > .mapTitle {padding: 10px;margin: 10px;border-bottom: 1px solid #888;display: flex;justify-content: space-between;}
+.mainMapContainer > .mapContent > #map {width:1300px;height:400px }
+.mainMapContainer > .mapContent > #info {padding-top: 20px;font-size: 20px;color: #777;margin-bottom: 50px;}
+.mainMapContainer > .mapContent > #info > strong {font-size: 35px;color: #d6561a;font-weight: 400;}
+.mainMapContainer > .mapContent > #info > a {float: right; height: 50px;padding: 0 20px;font-size: 18px;font-weight: 550;color: #fff;background-color: #d6561a;line-height: 50px;margin-right: 20px;}
+.mainMapContainer > .mapContent > #info > a > i {margin-right: 10px;font-size: 18px;}
+.mainMapContainer > .mapContent > #intro > .list-intro {padding: 20px;box-sizing: border-box;height: 100px;border-bottom: 0.5px solid #ddd;}
+.mainMapContainer > .mapContent > #intro > .list-intro:first-child {border-top: 0.5px solid #ddd;}
+.mainMapContainer > .mapContent > #intro > .list-intro > dl > dt,dd {display: inline-block;}
+.mainMapContainer > .mapContent > #intro > .list-intro > dl > dt {width: 15%;text-align: center;font-size: 20px;color: #333;font-weight: 550;}
+.mainMapContainer > .mapContent > #intro > .list-intro > dl > dt > a {color: #ccc; margin-right: 15px;}
+.mainMapContainer > .mapContent > #intro > .list-intro > dl > dd {font-size: 18px;color: #444;}
+.mainMapContainer > .mapTitle > strong {font-size: 20px; color: #d6561a; font-weight: 550;}
+.mainPriceContainer > .priceTitle {padding: 10px;margin: 10px;border-bottom: 1px solid #888;display: flex;justify-content: space-between;}
+.mainPriceContainer > .priceTitle > strong {font-size: 20px; color: #d6561a;font-weight: 550;}
+.mainPriceContainer > .priceWrap {text-align: center;}
+/* 공간소개 페이지 디자인 */
+.roomContainer {width: 1100px;margin: 100px auto;}
+.roomMenu {text-align: center;border-bottom: 1px solid #777;}
+.roomMenu > ul {display: flex;justify-content: center;width: 100%;}
+.roomMenu > ul > li {width: 50%;font-size: 25px;font-weight: 300;color: #75787b;padding: 10px 0 10px 0;}
+.roomMenu > ul > li.active {color: #d6561a}
+.roomMenu > ul > li:hover {color: #d6561a;}
+.roomWrap {width: 100%;margin: 0 auto;padding-top: 30px;}
+.roomintro1 > .roomTitle {font-size: 18px; color: #d6561a; padding: 10px;margin: 10px;border-bottom: 1px solid #888;font-weight: 550;}
+.roomintro1 > ul > li > .picture > img {border: 5px solid #d6561a;border-radius: 15px;}
+.roomintro1 > ul > li > .describle {padding: 30px 0 30px 0;}
+.roomintro1 > ul > li > .describle > strong {font-size: 16px;font-weight: 800;color: #d6561a;} 
+.roomintro1 > ul > li > .describle > p {font-size: 13px;color: #555;font-weight: 550;}
+
+
+.roomintro2 > .roomTitle {font-size: 18px; color: #d6561a; padding: 10px;margin: 10px;border-bottom: 1px solid #888;font-weight: 550;}
+.roomintro2 > ul > li > .picture > img {border: 5px solid #d6561a;border-radius: 15px;}
+.roomintro2 > ul > li > .describle {padding: 30px 0 30px 0;}
+.roomintro2 > ul > li > .describle > p {font-size: 13px;color: #555;font-weight: 550;}
+
+
+/* 가격소개 페이지 디자인 */
+.priceContainer {width: 1100px;margin: 100px auto;}
+.priceWrap {margin: 0 auto;padding-top: 30px;}
+.priceWrap > .priceTitle {font-size: 18px; color: #d6561a; padding: 10px;margin: 10px;border-bottom: 1px solid #888;font-weight: 550;}
+.priceWrap > .picture {text-align: center;}
+
+/* 오시는길 페이지 디자인 */
+.mapContainer {width: 1100px;margin: 100px auto;}
+.mapWrap {margin: 0 auto;padding-top: 30px;}
+.mapWrap > .mapTitle {font-size: 18px; color: #d6561a; padding: 10px;margin: 10px;border-bottom: 1px solid #888;font-weight: 550;}
+.mapWrap > .mapContent > #map {width: 100%;height: 400px;}
+.mapWrap > .mapContent > #info {padding-top: 20px;font-size: 20px;color: #777;margin-bottom: 50px;}
+.mapWrap > .mapContent > #info > strong {font-size: 35px;color: #d6561a;font-weight: 400;}
+.mapWrap > .mapContent > #info > a {float: right; height: 50px;padding: 0 20px;font-size: 18px;font-weight: 550;color: #fff;background-color: #d6561a;line-height: 50px;margin-right: 20px;}
+.mapWrap > .mapContent > #info > a > i {margin-right: 10px;font-size: 18px;}
+.mapWrap > .mapContent > #intro > .list-intro {padding: 20px;box-sizing: border-box;height: 100px;border-bottom: 0.5px solid #ddd;}
+.mapWrap > .mapContent > #intro > .list-intro:first-child {border-top: 0.5px solid #ddd;}
+.mapWrap > .mapContent > #intro > .list-intro > dl > dt,dd {display: inline-block;}
+.mapWrap > .mapContent > #intro > .list-intro > dl > dt {width: 15%;text-align: center;font-size: 20px;color: #333;font-weight: 550;}
+.mapWrap > .mapContent > #intro > .list-intro > dl > dt > a {color: #ccc; margin-right: 15px;}
+.mapWrap > .mapContent > #intro > .list-intro > dl > dd {font-size: 18px;color: #444;}
+/* footer 디자인 */
+.mainFooter {height: 150px;width: 100%;position: relative;bottom: 0;left: 0;background-color: #333;}
+.FooterWrap {width: 1100px;margin: 0 auto;padding: 30px 0;display: flex;justify-content: space-between;}
+.FooterWrap > .FooterTitle {display: inline-block;color: #ddd;}
+.FooterWrap > .FooterTitle > strong {font-size: 20px;}
+.FooterWrap > .FooterConn {display: inline-block;}
+.FooterConn > ul {display: inline-block;}
+.FooterConn > ul > li {display: inline-block;font-size: 45px;padding-left: 24px;color: #ddd;}
+
+
+/*게시판 페이지 디자인(공지사항 컨테이너)*/
+.boardContainer {width: 1000px;margin: 100px auto;height: 100vh;}
+.boardContainer > .boardWrap {padding-top: 30px;}
+.boardContainer > .boardWrap > .boardTitle {font-size: 18px; color: #d6561a; padding: 10px;margin: 10px;font-weight: 550;border-bottom: 1px solid #888;font-weight: 550;margin-bottom: 30px;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList {width: 100%;border-top: 2px solid #d6561a;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div {border-bottom: 1px solid #ddd;font-size: 0;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > .top {border-bottom: 1px solid #333;font-weight: 600;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div:last-child {border-bottom: 1px solid #333;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div:hover:not(.top) {background-color: #EEEEEE;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div > div {display: inline-block;font-size: 15px;text-align: center;padding: 15px 0;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div > .num {width: 10%;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div > .title {width: 60%;text-align: left;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div > .title > a {color: gray;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div > .title > span {color: gray;font-size: 12px;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div > .writer {width: 10%;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div > .date {width: 10%;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > div > .view {width: 10%;}
+.boardContainer > .boardWrap > .boardListWrap > .boardList > .top > .title {text-align: center;}
+.boardContainer > .boardWrap > .boardListWrap > .boardPage {margin-top: 30px;text-align: center;font-size: 0;}
+.boardContainer > .boardWrap > .boardListWrap > .boardPage > a {display: inline-block;width: 32px;height: 32px;vertical-align: middle;line-height: 100%;color: #000;box-sizing: border-box;}
+.boardContainer > .boardWrap > .boardListWrap > .boardPage > a.btn {font-size: 1rem;padding-top: 5px;}
+.boardContainer > .boardWrap > .boardListWrap > .boardPage > a.paingNumber {font-size: 1rem;padding-top: 5px;}
+.boardContainer > .boardWrap > .boardListWrap > .boardBtn {margin-top: 30px;font-size: 0;text-align: center;}
+.boardContainer > .boardWrap > .boardListWrap > .boardBtn > a {display: inline-block;min-width: 80px;padding: 10px;background-color: #d6561a;color: #fff;border-radius: 5px;font-size: 15px;}
+
+/* 게시판 페이지 디자인(상세페이지 컨테이너) */
+
+.boardContainer > .boardWrap > .boardViewWrap > .boardView {width: 100%;border-top: 2px solid #d6561a;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardView > .title {padding: 20px 15px;border-bottom: 1px dashed #ddd;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardView > .info {padding: 15px;border-bottom: 1px solid #999;display: flex;align-items: center;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardView > .info > dl {display: inline-block;padding: 0 20px;margin: 0;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardView > .info > dl:first-child {padding-left: 0;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardView > .info > dl > dt {display: inline-block;font-size: 12px;font-weight: 600;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardView > .info > dl > dd {display: inline-block;margin-left: 10px;color: #777;font-size: 12px;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardView > .content {padding: 15px;font-size: 15px;height: 400px;overflow: scroll;font-weight: 500;border-bottom: 2px solid #000;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardBtn {margin-top: 30px;text-align: center;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardBtn > a.on {background-color: #d6561a;color: #fff;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardBtn > a {display: inline-block;min-width: 80px;padding: 10px;border-radius: 5px;font-size: 15px;color: #000;}
+
+
+/* 게시판 페이지 디자인(업로드페이지 컨테이너) */
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite {width: 100%;border-top: 2px solid #000;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title {padding: 20px 15px;border-bottom: 1px dashed #ddd;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl {display: inline-block;margin: 0;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dt {display: inline-block;font-weight: 550;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd {display: inline-block;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd > input {padding: 5px;border: 2px solid #777;border-radius: 5px;width: 850px;height: 30px;font-size: 13px;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info {padding: 20px 15px;border-bottom: 2px solid #999;display: flex;justify-content: flex-start;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl {display: inline-block;margin: 0;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dt {display: inline-block;font-weight: 550;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dd {display: inline-block;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dd > input {padding: 5px;border: 2px solid #777;border-radius: 5px;width: 300px;height: 30px;font-size: 13px;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .content {padding: 20px 20px;border-bottom: 2px solid #000;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .content > textarea {resize: none;border: none; height: 400px;overflow:scroll;width: 100%;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardBtn {margin-top: 30px;text-align: center;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardBtn > input.on {background-color: #d6561a;color: #fff;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardBtn > input {display: inline-block;min-width: 80px;padding: 10px;border-radius: 5px;font-size: 15px;border: none;color: #000;}
+
+/* 어드민 페이지(로그인 전) */
+.adminContainer {width: 100%;height: 100%; display: flex;justify-content: center;align-items: center;text-align: center;background-color: #FFDAB9;}
+.adminWrap {border-radius: 15px;border: 5px solid #333;padding: 10px 20px;background-color: #eee;z-index: 100;}
+.title-box {font-size: 50px;font-weight: 550;}
+.input-box {margin: 30px  0 30px 0;}
+.input-box > input {width: 300px;height: 50px;font-size: 23px;border: none;border-bottom: 5px solid #333;background-color: transparent;}
+.btn-box > input {width: 300px;height: 50px;background-color: #d6561a;font-size: 23px;color: #fff;border-radius: 25px;}
+
+
+
+
+
+/* 모바일 용 디자인 */
+@media screen and (max-width : 1000px) {
+    .navBar {flex-direction: column;height: auto;}
+    .navLogo {width: 100%;padding: 10px 0 10px 0}
+    .navLogo > a > img {width: 156px;}
+    .navMenu {flex-direction: column;display: none;}
+    .navMenu > li {text-align: center;margin: 5px 10px;border-radius: 10px;}
+    .navMenu > li::after {display: none;}
+    .navToggleBtn {display: block;}
+    .navMenu.active {display: flex;}
+
+    .mainContainer {width: 100%;}
+    .mainLogo {margin: 0;}
+    .mainLogo > img {height: 400px;opacity: 0.5;}
+    .mainLogo > .mainLogoLan {width: 100%;height: 400px;top: 0;left: 0;display: flex;align-items: center;justify-content: center;}
+    .mainLogo > .mainLogoLan > div {display: none;}
+
+
+    .mainWrap {width: 100%;margin: 0;}
+    .mainTitle {display: none;}
+    .mainPriceContainer {display: none;}
+    .mainMapContainer > .mapTitle > strong {font-size: 15px;}
+    .mainMapContainer > .mapTitle > a {font-size: 15px;}
+    .mainMapContainer > .mapContent > #map {display: none;}
+    .mainMapContainer > .mapContent > #info {font-size: 15px;padding : 10px;box-sizing: border-box;}
+    .mainMapContainer > .mapContent > #info > strong {font-size: 22px;font-weight: 550;}
+    .mainMapContainer > .mapContent > #info > a {display: none;}
+    .mainMapContainer > .mapContent > #intro > .list-intro > dl {display: flex;justify-content: space-between;align-items: center;}
+    .mainMapContainer > .mapContent > #intro > .list-intro > dl > dt {font-size: 15px;width: 30%;}
+    .mainMapContainer > .mapContent > #intro > .list-intro > dl > dd {font-size: 13px}
+    .mainRoomContainer > .roomTitle > strong {font-size: 15px;}
+    .mainRoomContainer > .roomTitle > a {font-size: 15px;}
+    .mainRoomContainer > .roomData > .picture > img {width: 30%;height: auto;border: none;box-sizing: border-box;margin: 0;border-radius: 0;}
+    .mainRoomContainer > .roomData > .describle {display: none;}
+    .subMenu {display: none;}
+
+
+
+    .mapContainer {width: 100%;margin-top: 50px;}
+    .mapWrap {width: 100%;}
+    .mapWrap > .mapContent {width: 100%;}
+    .mapWrap > .mapContent > #map {width: 100%;height: 200px;padding: 20px;box-sizing: border-box;}
+    .mapWrap > .mapContent > #info {font-size: 15px;width: 100%;display: flex;justify-content: center;align-items: center;margin: 0;}
+    .mapWrap > .mapContent > #info > p {display: none;}
+    .mapWrap > .mapContent > #info > strong {display: none;}
+    .mapWrap > .mapContent > #intro {padding-top: 30px;}
+    .mapWrap > .mapContent > #intro > .list-intro > dl {display: flex;justify-content: space-between;align-items: center;}
+    .mapWrap > .mapContent > #intro > .list-intro > dl > dt {font-size: 15px;width: 30%;}
+    .mapWrap > .mapContent > #intro > .list-intro > dl > dd {font-size: 13px;}
+
+
+
+
+
+    .roomContainer {width: 100%;margin-top: 50px;}
+    .roomMenu > ul > li {font-size: 18px;}
+    .roomintro1 > ul > li > .picture > img {width: 100%;height: auto;object-fit: cover;border: none;border-radius: 0;padding: 20px;box-sizing: border-box;}
+    .roomintro1 > ul > li > .describle {padding : 30px 20px 30px 20px}
+    .roomintro2 > ul > li > .picture > img {width: 100%;height: auto;object-fit: cover;border: none;border-radius: 0;padding: 20px;box-sizing: border-box;}
+    .roomintro2 > ul > li > .describle {padding : 30px 20px 30px 20px}
+    
+
+    .boardContainer {width: 100%;}
+    .boardContainer > .boardWrap > .boardListWrap > .boardList {padding: 20px;box-sizing: border-box;border-top: none;}
+    .boardContainer > .boardWrap > .boardListWrap > .boardList > div > div {font-size: 12px;}
+    .boardContainer > .boardWrap > .boardListWrap > .boardList > div > .title {width: 50%;}
+    .boardContainer > .boardWrap > .boardListWrap > .boardList > div > .writer {width: 13%;}
+    .boardContainer > .boardWrap > .boardListWrap > .boardList > div > .date {width: 13%;}
+    .boardContainer > .boardWrap > .boardListWrap > .boardList > div > .view {width: 13%;}
+    
+
+    .boardContainer > .boardWrap > .boardViewWrap {padding: 20px;box-sizing: border-box;}
+    .boardContainer > .boardWrap > .boardViewWrap > .boardView > .info {display: flex;justify-content: space-between;}
+    .boardContainer > .boardWrap > .boardViewWrap > .boardView > .info > dl {display: flex;justify-content: space-around;align-items: center;padding: 0;}
+    .boardContainer > .boardWrap > .boardViewWrap > .boardView > .info > dl > dt {font-size: 8px;}
+    .boardContainer > .boardWrap > .boardViewWrap > .boardView > .info > dl > dd {font-size: 8px;}
+
+    .boardContainer > .boardWrap > .boardWriteWrap {padding: 20px;box-sizing: border-box;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd > input {max-width: 200px;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dd > input {max-width: 200px;}
+    
+    /* .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite {width: 100%;border-top: 2px solid #000;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title {padding: 20px 15px;border-bottom: 1px dashed #ddd;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl {display: inline-block;margin: 0;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dt {display: inline-block;font-weight: 550;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd {display: inline-block;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd > input {padding: 5px;border: 2px solid #777;border-radius: 5px;width: 850px;height: 30px;font-size: 13px;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info {padding: 20px 15px;border-bottom: 2px solid #999;display: flex;justify-content: flex-start;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl {display: inline-block;margin: 0;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dt {display: inline-block;font-weight: 550;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dd {display: inline-block;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dd > input {padding: 5px;border: 2px solid #777;border-radius: 5px;width: 300px;height: 30px;font-size: 13px;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .content {padding: 20px 20px;border-bottom: 2px solid #000;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .content > textarea {resize: none;border: none; height: 400px;overflow:scroll;width: 100%;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardBtn {margin-top: 30px;text-align: center;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardBtn > input.on {background-color: #d6561a;color: #fff;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardBtn > input {display: inline-block;min-width: 80px;padding: 10px;border-radius: 5px;font-size: 15px;border: none;color: #000;}
+     */
+
+
+    .priceContainer {width: 100%;height: 100%;margin: 0;margin-top: 50px;}
+    .priceWrap {width: 100%;}
+    .priceWrap > .picture {width: 100%;}
+    .priceWrap > .picture > img {width: 100%;height: auto;padding: 20px;box-sizing: border-box;}
+
+
+
+
+    .mainFooter {height: 85px;position: relative}
+    .FooterWrap {width: 100%;margin: 0;padding: 0;align-items: center;}
+    .FooterWrap > .FooterTitle {height: 85px; width: 100%;display: flex;align-items: center;justify-content: space-around;}
+    .FooterWrap > .FooterTitle > strong {font-size: 15px;}
+    .FooterWrap > .FooterTitle > p {font-size: 15px;}
+    .FooterConn > ul > li {display: none;}
+
+
+
+}
