@@ -95,7 +95,7 @@ input:focus {outline: none;}
 .mapWrap > .mapTitle {font-size: 18px; color: #d6561a; padding: 10px;margin: 10px;border-bottom: 1px solid #888;font-weight: 550;}
 .mapWrap > .mapContent > #map {width: 100%;height: 400px;}
 .mapWrap > .mapContent > #info {padding-top: 20px;font-size: 20px;color: #777;margin-bottom: 50px;}
-.mapWrap > .mapContent > #info > strong {font-size: 35px;color: #d6561a;font-weight: 400;}
+.mapWrap > .mapContent > #info > strong {font-size: 30px;color: #d6561a;font-weight: 400;}
 .mapWrap > .mapContent > #info > a {float: right; height: 50px;padding: 0 20px;font-size: 18px;font-weight: 550;color: #fff;background-color: #d6561a;line-height: 50px;margin-right: 20px;}
 .mapWrap > .mapContent > #info > a > i {margin-right: 10px;font-size: 18px;}
 .mapWrap > .mapContent > #intro > .list-intro {padding: 20px;box-sizing: border-box;height: 100px;border-bottom: 0.5px solid #ddd;}
@@ -151,7 +151,7 @@ input:focus {outline: none;}
 .boardContainer > .boardWrap > .boardViewWrap > .boardView > .content {padding: 15px;font-size: 15px;height: 400px;overflow: scroll;font-weight: 500;border-bottom: 2px solid #000;}
 .boardContainer > .boardWrap > .boardViewWrap > .boardBtn {margin-top: 30px;text-align: center;}
 .boardContainer > .boardWrap > .boardViewWrap > .boardBtn > a.on {background-color: #d6561a;color: #fff;}
-.boardContainer > .boardWrap > .boardViewWrap > .boardBtn > a {display: inline-block;min-width: 80px;padding: 10px;border-radius: 5px;font-size: 15px;color: #000;}
+.boardContainer > .boardWrap > .boardViewWrap > .boardBtn > a {display: inline-block;min-width: 80px;padding: 10px;border-radius: 5px;border: 2px solid #333;font-size: 15px;color: #000;}
 
 
 /* 게시판 페이지 디자인(업로드페이지 컨테이너) */
@@ -160,8 +160,8 @@ input:focus {outline: none;}
 .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl {display: inline-block;margin: 0;}
 .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dt {display: inline-block;font-weight: 550;}
 .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd {display: inline-block;}
-.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd > input {padding: 5px;border: 2px solid #777;border-radius: 5px;width: 850px;height: 30px;font-size: 13px;}
-.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info {padding: 20px 15px;border-bottom: 2px solid #999;display: flex;justify-content: flex-start;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd > input {padding: 5px;border: 2px solid #777;border-radius: 5px;width: 700px;height: 30px;font-size: 13px;}
+.boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info {padding: 20px 15px;border-bottom: 2px solid #999;}
 .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl {display: inline-block;margin: 0;}
 .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dt {display: inline-block;font-weight: 550;}
 .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dd {display: inline-block;}
@@ -222,7 +222,7 @@ input:focus {outline: none;}
 
 
 
-    .mapContainer {width: 100%;margin-top: 50px;}
+    .mapContainer {width: 100%;margin-top: 50px;height: 100%;}
     .mapWrap {width: 100%;}
     .mapWrap > .mapContent {width: 100%;}
     .mapWrap > .mapContent > #map {width: 100%;height: 200px;padding: 20px;box-sizing: border-box;}
@@ -246,7 +246,7 @@ input:focus {outline: none;}
     .roomintro2 > ul > li > .describle {padding : 30px 20px 30px 20px}
     
 
-    .boardContainer {width: 100%;}
+    .boardContainer {width: 100%;margin-bottom: 200px;}
     .boardContainer > .boardWrap > .boardListWrap > .boardList {padding: 20px;box-sizing: border-box;border-top: none;}
     .boardContainer > .boardWrap > .boardListWrap > .boardList > div > div {font-size: 12px;}
     .boardContainer > .boardWrap > .boardListWrap > .boardList > div > .title {width: 50%;}
@@ -262,26 +262,12 @@ input:focus {outline: none;}
     .boardContainer > .boardWrap > .boardViewWrap > .boardView > .info > dl > dd {font-size: 8px;}
 
     .boardContainer > .boardWrap > .boardWriteWrap {padding: 20px;box-sizing: border-box;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl {display: flex;justify-content: space-between;align-items: center;}
+    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl {display: flex;justify-content: space-between;align-items: center;}
     .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd > input {max-width: 200px;}
     .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dd > input {max-width: 200px;}
     
-    /* .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite {width: 100%;border-top: 2px solid #000;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title {padding: 20px 15px;border-bottom: 1px dashed #ddd;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl {display: inline-block;margin: 0;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dt {display: inline-block;font-weight: 550;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd {display: inline-block;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .title > dl > dd > input {padding: 5px;border: 2px solid #777;border-radius: 5px;width: 850px;height: 30px;font-size: 13px;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info {padding: 20px 15px;border-bottom: 2px solid #999;display: flex;justify-content: flex-start;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl {display: inline-block;margin: 0;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dt {display: inline-block;font-weight: 550;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dd {display: inline-block;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .info > dl > dd > input {padding: 5px;border: 2px solid #777;border-radius: 5px;width: 300px;height: 30px;font-size: 13px;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .content {padding: 20px 20px;border-bottom: 2px solid #000;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardWrite > .content > textarea {resize: none;border: none; height: 400px;overflow:scroll;width: 100%;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardBtn {margin-top: 30px;text-align: center;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardBtn > input.on {background-color: #d6561a;color: #fff;}
-    .boardContainer > .boardWrap > .boardWriteWrap > form > .boardBtn > input {display: inline-block;min-width: 80px;padding: 10px;border-radius: 5px;font-size: 15px;border: none;color: #000;}
-     */
+
 
 
     .priceContainer {width: 100%;height: 100%;margin: 0;margin-top: 50px;}

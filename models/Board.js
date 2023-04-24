@@ -24,6 +24,17 @@ class Board {
         }
     }
     
+    async delete() {
+        const client = this.body;
+        try {
+            const response = BoardStorage.deleteBoardinfo(client.id);
+            return response
+        } catch(err) {
+            return {success : false, msg : "삭제하던 도중 에러가 발생했습니다,."}
+        }
+    }
+
+
     async readOnlyOne() {
         
         const client = this.body;

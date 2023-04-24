@@ -58,6 +58,12 @@ const process = {
 		const response = await board.updateView();
 		return res.json(response)
     },
+
+    bbs_delete : async (req,res) => {
+		const board = new Board(req.body);
+		const response = await board.delete();
+		return res.json(response)
+    },
 }
 
 module.exports = {

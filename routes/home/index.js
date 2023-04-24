@@ -20,4 +20,5 @@ router.post('/bbs/board',ctrl.process.bbs_board)
 router.post('/bbs/write',ctrl.process.bbs_write)
 router.post('/bbs/detail',ctrl.process.bbs_detail)
 router.post('/bbs/view',ctrl.process.bbs_view)
+router.post('/bbs/delete',ctrl.process.bbs_delete)
 module.exports = router;

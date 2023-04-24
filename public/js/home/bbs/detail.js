@@ -1,6 +1,31 @@
 const url = new URL(window.location.href);
 const urlParams = url.searchParams;
 const id = urlParams.get('id');
+function checkAdminIsRight() {
+    if(localStorage.getItem('user')) {
+        deleteBoardData()
+    } else {
+        alert('관리자가 아니기에 삭제가 안됩니다.')
+        document.location.href = "/bbs/board";
+    }
+}
+function deleteBoardData() {
+    
+    const req = {id}
+
+    fetch('/bbs/delete',{
+        method : "POST",
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(req),
+    })
+     .then((res)=>res.json())
+     .then((res)=>{
+        alert(res.msg)
+        document.location.href = "/bbs/board"
+     })
+}
 
 
 function showBoardData(data) {

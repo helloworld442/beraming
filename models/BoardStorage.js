@@ -46,6 +46,16 @@ class BoardStorage {
             })
         })
     }
+
+    static deleteBoardinfo(id) {
+        return new Promise((resolve,reject) => {
+            const query = "DELETE FROM info_board WHERE id = ?"
+            db.query(query,[id],(err,data)=>{
+                if(err) reject({success : false , msg : `${err}`});
+                resolve({success : true, msg : "성공적으로 게시물이 삭제됬습니다."})
+            })
+        })
+    }
     
 }
 
