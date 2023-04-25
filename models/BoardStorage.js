@@ -28,7 +28,6 @@ class BoardStorage {
 
     static setBoardinfo(body) {
         return new Promise((resolve,reject) => {
-            console.log(body)
             const query = "INSERT INTO info_board (idx, writer, wdate, title, pw, content, view) VALUES (?, ?, ?, ?, ?, ?, ?)"
             db.query(query, [body.idx, body.name, body.wdate, body.title, body.pw, body.content, 0] , (err,data)=>{
                 if(err) reject({success : false , msg : `${err}`});

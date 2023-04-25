@@ -43,7 +43,6 @@ const process = {
 		return res.json(response)
     },
     bbs_write : async (req,res) => {
-        console.log(req.file)
 		const board = new Board(req.body);
 		const response = await board.create();
 		return res.json(response)

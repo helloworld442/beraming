@@ -18,7 +18,7 @@ input:focus {outline: none;}
 .navMenu > li > a.active {color: #d6561a;;}
 .navToggleBtn {position: absolute;top: 0;right: 0;padding: 10px 10px 10px 0;font-size: 26px;color: #777;display: none;}
 /* 서브네이게이션 디자인 */
-.subMenu > ul > li:first-child {bottom: 20%;right: 5%;}
+.subMenu > ul > li:first-child {bottom:25%;right: 5%;}
 .subMenu > ul > li {margin: 30px;position: fixed;bottom: 10%;right: 5%;z-index: 100;}
 .subMenu > ul > li > a {font-size: 30px;width: 80px;height: 80px;display: flex;justify-content: center;align-items: center;background-color: #d6561a;color: #fff;border-radius: 50%;box-shadow: 5px 5px 5px gray;}
 .subMenu > ul > li > .phone:hover {width: 150px;border-radius: 50px;}
@@ -71,7 +71,8 @@ input:focus {outline: none;}
 .roomMenu > ul > li:hover {color: #d6561a;}
 .roomWrap {width: 100%;margin: 0 auto;padding-top: 30px;}
 .roomintro1 > .roomTitle {font-size: 18px; color: #d6561a; padding: 10px;margin: 10px;border-bottom: 1px solid #888;font-weight: 550;}
-.roomintro1 > ul > li > .picture > img {border: 5px solid #d6561a;border-radius: 15px;}
+.roomintro1 > ul > li > .picture {width: 100%;}
+.roomintro1 > ul > li > .picture > img {border: 5px solid #d6561a;border-radius: 15px;width: 100%;}
 .roomintro1 > ul > li > .describle {padding: 30px 0 30px 0;}
 .roomintro1 > ul > li > .describle > strong {font-size: 16px;font-weight: 800;color: #d6561a;} 
 .roomintro1 > ul > li > .describle > p {font-size: 13px;color: #555;font-weight: 550;}

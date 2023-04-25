@@ -1,6 +1,9 @@
 const url = new URL(window.location.href);
 const urlParams = url.searchParams;
 const id = urlParams.get('id');
+
+
+
 function checkAdminIsRight() {
     if(localStorage.getItem('user')) {
         deleteBoardData()
